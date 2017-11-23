@@ -4,15 +4,18 @@ from xml.etree import ElementTree
 
 class XML_preprocessor(object):
 
-    def __init__(self, data_path):
+    def __init__(self, data_path, label_names):
         self.path_prefix = data_path
-        self.num_classes = 20
+        self.label_names = label_names
+        self.num_classes = len(label_names)
         self.data = dict()
         self._preprocess_XML()
 
     def _preprocess_XML(self):
         filenames = os.listdir(self.path_prefix)
         for filename in filenames:
+            if os.path.splitext(filename)[1] != '.xml':
+                continue
             tree = ElementTree.parse(self.path_prefix + filename)
             root = tree.getroot()
             bounding_boxes = []
@@ -31,7 +34,8 @@ class XML_preprocessor(object):
                 class_name = object_tree.find('name').text
                 one_hot_class = self._to_one_hot(class_name)
                 one_hot_classes.append(one_hot_class)
-            image_name = root.find('filename').text
+            # image_name = root.find('filename').text
+            image_name = os.path.splitext(filename)[0] + '.jpg'
             bounding_boxes = np.asarray(bounding_boxes)
             one_hot_classes = np.asarray(one_hot_classes)
             image_data = np.hstack((bounding_boxes, one_hot_classes))
@@ -39,53 +43,142 @@ class XML_preprocessor(object):
 
     def _to_one_hot(self,name):
         one_hot_vector = [0] * self.num_classes
-        if name == 'aeroplane':
-            one_hot_vector[0] = 1
-        elif name == 'bicycle':
-            one_hot_vector[1] = 1
-        elif name == 'bird':
-            one_hot_vector[2] = 1
-        elif name == 'boat':
-            one_hot_vector[3] = 1
-        elif name == 'bottle':
-            one_hot_vector[4] = 1
-        elif name == 'bus':
-            one_hot_vector[5] = 1
-        elif name == 'car':
-            one_hot_vector[6] = 1
-        elif name == 'cat':
-            one_hot_vector[7] = 1
-        elif name == 'chair':
-            one_hot_vector[8] = 1
-        elif name == 'cow':
-            one_hot_vector[9] = 1
-        elif name == 'diningtable':
-            one_hot_vector[10] = 1
-        elif name == 'dog':
-            one_hot_vector[11] = 1
-        elif name == 'horse':
-            one_hot_vector[12] = 1
-        elif name == 'motorbike':
-            one_hot_vector[13] = 1
-        elif name == 'person':
-            one_hot_vector[14] = 1
-        elif name == 'pottedplant':
-            one_hot_vector[15] = 1
-        elif name == 'sheep':
-            one_hot_vector[16] = 1
-        elif name == 'sofa':
-            one_hot_vector[17] = 1
-        elif name == 'train':
-            one_hot_vector[18] = 1
-        elif name == 'tvmonitor':
-            one_hot_vector[19] = 1
+        if name in self.label_names:
+            index = self.label_names.index(name)
+            one_hot_vector[index] = 1
         else:
             print('unknown label: %s' %name)
 
         return one_hot_vector
 
-## example on how to use it
-# import pickle
-# data = XML_preprocessor('VOC2007/Annotations/').data
-# pickle.dump(data,open('VOC2007.p','wb'))
+# example on how to use it
+# all_names = ['adidas',
+#  'aldi',
+#  'apple',
+#  'becks',
+#  'bmw',
+#  'carlsberg',
+#  'chimay',
+#  'cocacola',
+#  'corona',
+#  'dhl',
+#  'erdinger',
+#  'esso',
+#  'fedex',
+#  'ferrari',
+#  'ford',
+#  'fosters',
+#  'google',
+#  'guiness',
+#  'heineken',
+#  'HP',
+#  'lays',
+#  'milka',
+#  'nvidia',
+#  'paulaner',
+#  'pepsi',
+#  'rittersport',
+#  'shell',
+#  'singha',
+#  'starbucks',
+#  'stellaartois',
+#  'texaco',
+#  'tsingtao',
+#  'ups',
+#  'yili',
+#  'keaiduo',
+#  'magnum',
+#  'heluxue',
+#  'DAVIDOFF',
+#  'BURGERKING',
+#  'ef',
+#  'minute_en',
+#  'chuncui',
+#  'eddge',
+#  'minute_zh',
+#  'Anchor',
+#  'shengdanbei',
+#  'aeroplane',
+#  'bicycle',
+#  'bird',
+#  'boat',
+#  'bottle',
+#  'bus',
+#  'car',
+#  'cat',
+#  'chair',
+#  'cow',
+#  'diningtable',
+#  'dog',
+#  'horse',
+#  'motorbike',
+#  'person',
+#  'pottedplant',
+#  'sheep',
+#  'sofa',
+#  'train',
+#  'tvmonitor',
+#  'chinatelecom',
+#  'mengniu',
+#  'listerine',
+#  'chinaunicom',
+#  'haier',
+#  'qiangsheng',
+#  'safeguard',
+#  'dove',
+#  'vaseline',
+#  'chanel',
+#  'nongfushanquan',
+#  'chinamobile',
+#  'skii',
+#  'huawei',
+#  'xinxiangyin',
+#  'haifeisi',
+#  'midea',
+#  'zhaohang',
+#  'gree',
+#  'lipton',
+#  'budweiser',
+#  'harbinbeer',
+#  'yeehoo',
+#  'Jia Duo Bao',
+#  'wanglaoji',
+#  'mirinda',
+#  'heytea',
+#  'tongyi',
+#  'red bull',
+#  'sprite',
+#  'mizone',
+#  'fanta',
+#  'weiquan',
+#  'vita',
+#  'kangshifu',
+#  'wushilan',
+#  'yidiandian',
+#  'ambrosial',
+#  'background']
+all_names = ['aeroplane',
+ 'bicycle',
+ 'bird',
+ 'boat',
+ 'bottle',
+ 'bus',
+ 'car',
+ 'cat',
+ 'chair',
+ 'cow',
+ 'diningtable',
+ 'dog',
+ 'horse',
+ 'motorbike',
+ 'person',
+ 'pottedplant',
+ 'sheep',
+ 'sofa',
+ 'train',
+ 'tvmonitor']
+
+import pickle
+data = XML_preprocessor('/Users/Lavector/dataset/VOC2012/Annotations/', all_names).data
+pickle.dump(data,open('../VOC2012.pickle','wb'))
 

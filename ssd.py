@@ -1,5 +1,12 @@
 """Keras implementation of SSD."""
 
+import os
+os.environ['KERAS_BACKEND']='tensorflow'
+# os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"   # see issue #152
+# os.environ["CUDA_VISIBLE_DEVICES"] = ""
+import keras.backend as K
+K.set_image_dim_ordering('tf')
+
 import keras.backend as K
 from keras.layers import Activation
 from keras.layers import AtrousConvolution2D

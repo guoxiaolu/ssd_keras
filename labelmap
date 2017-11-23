@@ -1,0 +1,519 @@
+name: "adidas"
+label: 1
+display_name: "adidas"
+
+
+name: "aldi"
+label: 2
+display_name: "aldi"
+
+
+name: "apple"
+label: 3
+display_name: "apple"
+
+
+name: "becks"
+label: 4
+display_name: "becks"
+
+
+name: "bmw"
+label: 5
+display_name: "bmw"
+
+
+name: "carlsberg"
+label: 6
+display_name: "carlsberg"
+
+
+name: "chimay"
+label: 7
+display_name: "chimay"
+
+
+name: "cocacola"
+label: 8
+display_name: "cocacola"
+
+
+name: "corona"
+label: 9
+display_name: "corona"
+
+
+name: "dhl"
+label: 10
+display_name: "dhl"
+
+
+name: "erdinger"
+label: 11
+display_name: "erdinger"
+
+
+name: "esso"
+label: 12
+display_name: "esso"
+
+
+name: "fedex"
+label: 13
+display_name: "fedex"
+
+
+name: "ferrari"
+label: 14
+display_name: "ferrari"
+
+
+name: "ford"
+label: 15
+display_name: "ford"
+
+
+name: "fosters"
+label: 16
+display_name: "fosters"
+
+
+name: "google"
+label: 17
+display_name: "google"
+
+
+name: "guiness"
+label: 18
+display_name: "guiness"
+
+
+name: "heineken"
+label: 19
+display_name: "heineken"
+
+
+name: "HP"
+label: 20
+display_name: "HP"
+
+
+name: "lays"
+label: 21
+display_name: "lays"
+
+
+name: "milka"
+label: 22
+display_name: "milka"
+
+
+name: "nvidia"
+label: 23
+display_name: "nvidia"
+
+
+name: "paulaner"
+label: 24
+display_name: "paulaner"
+
+
+name: "pepsi"
+label: 25
+display_name: "pepsi"
+
+
+name: "rittersport"
+label: 26
+display_name: "rittersport"
+
+
+name: "shell"
+label: 27
+display_name: "shell"
+
+
+name: "singha"
+label: 28
+display_name: "singha"
+
+
+name: "starbucks"
+label: 29
+display_name: "starbucks"
+
+
+name: "stellaartois"
+label: 30
+display_name: "stellaartois"
+
+
+name: "texaco"
+label: 31
+display_name: "texaco"
+
+
+name: "tsingtao"
+label: 32
+display_name: "tsingtao"
+
+
+name: "ups"
+label: 33
+display_name: "ups"
+
+
+name: "yili"
+label: 34
+display_name: "yili"
+
+
+name: "keaiduo"
+label: 35
+display_name: "keaiduo"
+
+
+name: "magnum"
+label: 36
+display_name: "magnum"
+
+
+name: "heluxue"
+label: 37
+display_name: "heluxue"
+
+
+name: "DAVIDOFF"
+label: 38
+display_name: "DAVIDOFF"
+
+
+name: "BURGERKING"
+label: 39
+display_name: "BURGERKING"
+
+
+name: "ef"
+label: 40
+display_name: "ef"
+
+
+name: "minute_en"
+label: 41
+display_name: "minute_en"
+
+
+name: "chuncui"
+label: 42
+display_name: "chuncui"
+
+
+name: "eddge"
+label: 43
+display_name: "eddge"
+
+
+name: "minute_zh"
+label: 44
+display_name: "minute_zh"
+
+
+name: "Anchor"
+label: 45
+display_name: "Anchor"
+
+
+name: "shengdanbei"
+label: 46
+display_name: "shengdanbei"
+
+
+name: "aeroplane"
+label: 47
+display_name: "aeroplane"
+
+
+name: "bicycle"
+label: 48
+display_name: "bicycle"
+
+
+name: "bird"
+label: 49
+display_name: "bird"
+
+
+name: "boat"
+label: 50
+display_name: "boat"
+
+
+name: "bottle"
+label: 51
+display_name: "bottle"
+
+
+name: "bus"
+label: 52
+display_name: "bus"
+
+
+name: "car"
+label: 53
+display_name: "car"
+
+
+name: "cat"
+label: 54
+display_name: "cat"
+
+
+name: "chair"
+label: 55
+display_name: "chair"
+
+
+name: "cow"
+label: 56
+display_name: "cow"
+
+
+name: "diningtable"
+label: 57
+display_name: "diningtable"
+
+
+name: "dog"
+label: 58
+display_name: "dog"
+
+
+name: "horse"
+label: 59
+display_name: "horse"
+
+
+name: "motorbike"
+label: 60
+display_name: "motorbike"
+
+
+name: "person"
+label: 61
+display_name: "person"
+
+
+name: "pottedplant"
+label: 62
+display_name: "pottedplant"
+
+
+name: "sheep"
+label: 63
+display_name: "sheep"
+
+
+name: "sofa"
+label: 64
+display_name: "sofa"
+
+
+name: "train"
+label: 65
+display_name: "train"
+
+
+name: "tvmonitor"
+label: 66
+display_name: "tvmonitor"
+
+
+name: "chinatelecom"
+label: 67
+display_name: "chinatelecom"
+
+
+name: "mengniu"
+label: 68
+display_name: "mengniu"
+
+
+name: "listerine"
+label: 69
+display_name: "listerine"
+
+
+name: "chinaunicom"
+label: 70
+display_name: "chinaunicom"
+
+
+name: "haier"
+label: 71
+display_name: "haier"
+
+
+name: "qiangsheng"
+label: 72
+display_name: "qiangsheng"
+
+
+name: "safeguard"
+label: 73
+display_name: "safeguard"
+
+
+name: "dove"
+label: 74
+display_name: "dove"
+
+
+name: "vaseline"
+label: 75
+display_name: "vaseline"
+
+
+name: "chanel"
+label: 76
+display_name: "chanel"
+
+
+name: "nongfushanquan"
+label: 77
+display_name: "nongfushanquan"
+
+
+name: "chinamobile"
+label: 78
+display_name: "chinamobile"
+
+
+name: "skii"
+label: 79
+display_name: "skii"
+
+
+name: "huawei"
+label: 80
+display_name: "huawei"
+
+
+name: "xinxiangyin"
+label: 81
+display_name: "xinxiangyin"
+
+
+name: "haifeisi"
+label: 82
+display_name: "haifeisi"
+
+
+name: "midea"
+label: 83
+display_name: "midea"
+
+
+name: "zhaohang"
+label: 84
+display_name: "zhaohang"
+
+
+name: "gree"
+label: 85
+display_name: "gree"
+
+
+name: "lipton"
+label: 86
+display_name: "lipton"
+
+
+name: "budweiser"
+label: 87
+display_name: "budweiser"
+
+
+name: "harbinbeer"
+label: 88
+display_name: "harbinbeer"
+
+
+name: "yeehoo"
+label: 89
+display_name: "yeehoo"
+
+
+name: "Jia Duo Bao"
+label: 90
+display_name: "Jia Duo Bao"
+
+
+name: "wanglaoji"
+label: 91
+display_name: "wanglaoji"
+
+
+name: "mirinda"
+label: 92
+display_name: "mirinda"
+
+
+name: "heytea"
+label: 93
+display_name: "heytea"
+
+
+name: "tongyi"
+label: 94
+display_name: "tongyi"
+
+
+name: "red bull"
+label: 95
+display_name: "red bull"
+
+
+name: "sprite"
+label: 96
+display_name: "sprite"
+
+
+name: "mizone"
+label: 97
+display_name: "mizone"
+
+
+name: "fanta"
+label: 98
+display_name: "fanta"
+
+
+name: "weiquan"
+label: 99
+display_name: "weiquan"
+
+
+name: "vita"
+label: 100
+display_name: "vita"
+
+
+name: "kangshifu"
+label: 101
+display_name: "kangshifu"
+
+
+name: "wushilan"
+label: 102
+display_name: "wushilan"
+
+
+name: "yidiandian"
+label: 103
+display_name: "yidiandian"
+
+
+name: "ambrosial"
+label: 104
+display_name: "ambrosial"
+
