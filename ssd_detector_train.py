@@ -37,11 +37,16 @@ bbox_util = BBoxUtility(NUM_CLASSES, priors)
 
 gt = pickle.load(open('VOC2012.pickle', 'rb'))
 keys = sorted(gt.keys())
+shuffle(keys)
 num_train = int(round(0.9 * len(keys)))
 # num_train = len(keys)-1
 train_keys = keys[:num_train]
 val_keys = keys[num_train:]
 num_val = len(val_keys)
+is_save = True
+if is_save:
+    pickle.dump(train_keys, open('./train.pickle','wb'))
+    pickle.dump(train_keys, open('./val.pickle', 'wb'))
 
 
 class Generator(object):
@@ -264,7 +269,7 @@ gen = Generator(gt, bbox_util, 16, '/Users/Lavector/dataset/VOC2012/JPEGImages/'
                 (input_shape[0], input_shape[1]), do_crop=False)
 
 model = SSD300(input_shape, num_classes=NUM_CLASSES)
-model.load_weights('/Users/Lavector/model/SSD/weights_SSD300.hdf5', by_name=True)
+model.load_weights('/Users/Lavector/.keras/models/vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5', by_name=True)
 
 freeze = ['input_1', 'conv1_1', 'conv1_2', 'pool1',
           'conv2_1', 'conv2_2', 'pool2',
