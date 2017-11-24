@@ -37,8 +37,8 @@ bbox_util = BBoxUtility(NUM_CLASSES, priors)
 
 gt = pickle.load(open('VOC2012.pickle', 'rb'))
 keys = sorted(gt.keys())
-num_train = int(round(0.8 * len(keys)))
-num_train = len(keys)-1
+num_train = int(round(0.9 * len(keys)))
+# num_train = len(keys)-1
 train_keys = keys[:num_train]
 val_keys = keys[num_train:]
 num_val = len(val_keys)
